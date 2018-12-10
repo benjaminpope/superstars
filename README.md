@@ -1,5 +1,5 @@
 # superstars
-Hack sesh with DH &amp; JD 
+Hack sesh with Daniela Huppenkothen, Jim Davenport, Ben Pope 
 
 
 ### How to interact with TESS Data
