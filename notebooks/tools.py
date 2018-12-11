@@ -18,11 +18,14 @@ def has_data(catalog,raname='ra',decname='dec',namename='Name',verbose=True):
     for j, name in enumerate(catalog[namename]):
         ra, dec = catalog[j][raname,decname]
         coords = SkyCoord(ra,dec,unit=(u.hourangle,u.deg))
-        hdulist = Tesscut.get_cutouts(coords, 5)
-        if len(hdulist) !=0:
-            indices.append(j)
-            if verbose:
-                print('%s %.3f %.3f\n' % (name,coords.ra.deg, coords.dec.deg))
+        try:
+            hdulist = Tesscut.get_cutouts(coords, 5)
+            if len(hdulist) !=0:
+                indices.append(j)
+                if verbose:
+                    print('%s %.3f %.3f\n' % (name,coords.ra.deg, coords.dec.deg))
+        except:
+            pass
     return indices
 
 def find_in_tess(catalog,raname='ra',decname='dec',namename='Name',verbose=True):
