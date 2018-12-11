@@ -40,3 +40,11 @@ def find_in_tess(catalog,raname='ra',decname='dec',namename='Name',verbose=True)
                 print(name)
     in_tess = join(Table({namename:np.array(names)}),catalog,keys=namename)
     return in_tess
+
+def find_object(catalog,name,raname='ra',decname='dec',namename='Name',verbose=True):
+    m = catalog['Name']==name
+    target = catalog[m][0]
+    ra, dec = target[raname,decname]
+    obsTable = Observations.query_region("%s %s "  % (ra, dec),radius=10*u.arcsec)
+
+    return obsTable
