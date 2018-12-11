@@ -12,14 +12,14 @@ from astroquery.mast import Observations
 from astroquery.mast import Tesscut
 
 
-def has_data(catalog,raname='ra',decname='dec',namename='Name',verbose=True):
+def has_data(catalog,raname='ra',decname='dec',namename='Name',verbose=True,cutout=1):
     indices = []
 
     for j, name in enumerate(catalog[namename]):
         ra, dec = catalog[j][raname,decname]
         coords = SkyCoord(ra,dec,unit=(u.hourangle,u.deg))
         try:
-            hdulist = Tesscut.get_cutouts(coords, 5)
+            hdulist = Tesscut.get_cutouts(coords, cutout) # actually downloads the FITS files! eep! 
             if len(hdulist) !=0:
                 indices.append(j)
                 if verbose:
