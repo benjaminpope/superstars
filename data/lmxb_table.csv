@@ -1,7 +1,3 @@
-
-
-Results from heasarc_ritterlmxb: Ritter Low-Mass X-Ray Binaries Catalog (7.21 Edition)
-Coordinate system:  Equatorial
 |name        |ra        |dec      |lim_mag1|mag1|type1|orbital_period|orbital_period_flag|lim_lx_lopt|lx_lopt|period2  |period2_flag|period3    |period3_flag|period4|eclipse|lim_mass_ratio|mass_ratio|lim_inclination|inclination|inclination_flag|inclination_error|m1   |m1_flag|m1_error|lim_m2|m2    |m2_flag|m2_error|class                 |
 |NGC 104-X5  |00 24 00.9|-72 04 53|        |21.7|XT   |      0.361100|                   |           |       |         |            |           |            |       |1      |              |          |               |           |                |                 |     |       |        |      |      |       |        |                 LMXRB|
 |NGC 104-X7  |00 24 03.5|-72 04 52|        |    |XT   |      0.230000|:                  |           |       |         |            |           |            |       |       |              |          |               |           |                |                 |     |       |        |      |      |       |        |                 LMXRB|
